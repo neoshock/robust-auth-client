@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    h2 {
+        text-align: center;
+        font-size: 3em;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        margin-bottom: 0;
+        animation-name: iluminate;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes iluminate {
+    0% {
+        color: rgb(255, 255, 255);
+    }
+    25% {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 10px rgb(255, 255, 255);
+    }
+    50% {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 10px rgb(255, 255, 255);
+    }
+}
