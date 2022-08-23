@@ -1,3 +1,13 @@
+<div class="alert alert-warning" *ngIf="errorMessage != ''">
+    <strong>¡Atención!</strong>
+    <p>
+        <strong>
+            <span class="alert-text"></span>
+            {{ errorMessage }}
+        </strong>
+    </p>
+</div>
+
 <div class="form">
     <div class="form-header">
         <h4>Inicio de sesión</h4>
@@ -5,12 +15,14 @@
     <form class="form-main">
         <div class="form-input">
             <label for="">Correo Electronico: *</label>
-            <input name="email" type="email" [(ngModel)]="user.email" [ngClass]="{'input-error': (onErrorValidator) }" (change)="clearValidation()" required>
+            <input name="email" type="email" [(ngModel)]="user.email" [ngClass]="{'input-error': (onErrorValidator) }"
+                (change)="clearValidation()" required>
             <span *ngIf="onErrorValidator" class="label-error">Correo electronico incorrecto</span>
         </div>
         <div class="form-input">
             <label for="">Contraseña: *</label>
-            <input name="password" type="password" [(ngModel)]="user.password" [ngClass]="{'input-error': (onErrorValidator) }" (change)="clearValidation()" required>
+            <input name="password" type="password" [(ngModel)]="user.password"
+                [ngClass]="{'input-error': (onErrorValidator) }" (change)="clearValidation()" required>
             <span *ngIf="onErrorValidator" class="label-error">Contraseña incorrecta</span>
         </div>
         <div class="form-button">

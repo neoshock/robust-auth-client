@@ -15,4 +15,9 @@ export class UserService {
   login(user: User): Observable<any> {
     return this.http.post(this.url + '/auth/sign-in', user);
   }
+
+  setUserToLocalStorage(result: string){
+    localStorage.setItem("token", result);
+  }
+  
 }

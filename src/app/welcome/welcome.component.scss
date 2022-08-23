@@ -6,6 +6,27 @@
     height: 100vh;
 }
 
+.log-out-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    background: #6027b6;
+    margin-top: 3%;
+    margin-right: 6%;
+    padding: 9px;
+    font-size: 18px;
+    color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.log-out-btn:hover {
+    background: #8452cf;
+}
+
 .main-welcome {
     display: flex;
     flex-direction: column;
